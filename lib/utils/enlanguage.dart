@@ -1,7 +1,7 @@
 class EnString {
 
 
-  static String get loginaccount => "Login Account";
+  static String get login => "Login ";
 
   static String get category => "Category";
 
@@ -13,23 +13,23 @@ class EnString {
 
   static String get number => "Mobile Number";
 
-  static String get alisha => "Alisha";
+  static String get verify => "Verify";
 
   static String get total => "Total";
 
-  static String get checkoutcourse => "Checkout Course";
+  static String get FirstName => "First Name";
 
-  static String get paymentmethod => "Payment Method";
+  static String get SecondName => "Last Name";
 
-  static String get question => "Question";
+  static String get DOB => "Date of Birth";
 
-  static String get applycode => "Apply Code";
+  static String get Gender => "Gender";
 
   static String get change => "Change";
 
   static String get checkout => "Checkout";
 
-  static String get webdesignforbeginners => "Pro Web Designer";
+  static String get AlreadyHaACC => "Already have account";
 
   static String get customerservice => "Customer Service";
 

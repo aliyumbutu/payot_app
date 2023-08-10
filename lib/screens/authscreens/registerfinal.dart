@@ -59,7 +59,7 @@ class _RegisterFinalState extends State<RegisterFinal> {
                     clipper:Customshape(),
                     child: Container(
                       height: 210,
-                      width: MediaQuery.of(context).size.width,
+                      width: MediaQuery.of(context).size.width/1.3,
                       color:const Color(0xFF2791c7) ,
                     ),
                   ),
@@ -94,8 +94,8 @@ class _RegisterFinalState extends State<RegisterFinal> {
 
                             alignment: Alignment.bottomRight,
                             child: Padding(
-                              padding:  const EdgeInsets.all(10),
-                              child: Image.asset("logo2.png",scale: 5,),
+                              padding:  const EdgeInsets.all(20),
+                              child: Image.asset("assets/logo2.png",scale: 5,),
 
                             ),
                           )
@@ -107,19 +107,19 @@ class _RegisterFinalState extends State<RegisterFinal> {
                 ],
               ),
             ),
-            SizedBox(height:height/ 10),
+            SizedBox(height:height/ 100),
 
             Center(
               child: Padding(
-                padding: const EdgeInsets.all(70),
-                child: Image.asset('login.png'),
+                padding: const EdgeInsets.only(top: 50,left: 100,right:100),
+                child: Image.asset('assets/welcome-2.png'),
               ),
             ),
-            SizedBox(height:height/90),
+            SizedBox(height:height/100),
             Container(
               child: Customtextfild.textField(
                 firstName,
-                EnString.number,
+                EnString.FirstName,
                 notifier.getvisacolor,
                 notifier.getvisacolor,
                 notifier.getvisacolor,
@@ -132,11 +132,11 @@ class _RegisterFinalState extends State<RegisterFinal> {
                 keyboardType: TextInputType.text,
               ),
             ),
-            SizedBox(height:height/90),
+            SizedBox(height:height/100),
             Container(
               child: Customtextfild.textField(
                 lastName,
-                EnString.number,
+                EnString.SecondName,
                 notifier.getvisacolor,
                 notifier.getvisacolor,
                 notifier.getvisacolor,
@@ -149,11 +149,11 @@ class _RegisterFinalState extends State<RegisterFinal> {
                 keyboardType: TextInputType.text,
               ),
             ),
-            SizedBox(height:height/90),
+            SizedBox(height:height/100),
             Container(
               child: Customtextfild.textField(
                 dateOfBirth,
-                EnString.number,
+                EnString.DOB,
                 notifier.getvisacolor,
                 notifier.getvisacolor,
                 notifier.getvisacolor,
@@ -166,11 +166,11 @@ class _RegisterFinalState extends State<RegisterFinal> {
                 keyboardType: TextInputType.text,
               ),
             ),
-            SizedBox(height:height/90),
+            SizedBox(height:height/100),
             Container(
               child: Customtextfild.textField(
                 Gender,
-                EnString.number,
+                EnString.Gender,
                 notifier.getvisacolor,
                 notifier.getvisacolor,
                 notifier.getvisacolor,
@@ -183,7 +183,7 @@ class _RegisterFinalState extends State<RegisterFinal> {
                 keyboardType: TextInputType.text,
               ),
             ),
-            SizedBox(height: height/30),
+            SizedBox(height: height/100),
             GestureDetector(
               onTap: (){
                 Navigator.push(context,
@@ -193,9 +193,16 @@ class _RegisterFinalState extends State<RegisterFinal> {
               },
               child: Custombutton.button(primeryColor, EnString.submit, width/1.1),
             ),
+
+            SizedBox(height: height/20,)
           ],
+
+
         ),
+
+
       ),
+
 
     );
   }

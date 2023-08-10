@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:payonetime/screens/authscreens/registerfinal.dart';
 import 'package:payonetime/screens/authscreens/signin.dart';
@@ -57,7 +57,7 @@ class _OtpState extends State<Otp> {
                     clipper:Customshape(),
                     child: Container(
                       height: 210,
-                      width: MediaQuery.of(context).size.width,
+                      width: MediaQuery.of(context).size.width/1.3,
                       color:const Color(0xFF2791c7) ,
                     ),
                   ),
@@ -67,7 +67,7 @@ class _OtpState extends State<Otp> {
                           child: Align(
                             alignment: Alignment.bottomLeft,
                             child: Padding(
-                              padding: EdgeInsets.all(25),
+                              padding: const EdgeInsets.all(25),
                               child: RichText(
                                 text: const TextSpan(
                                     children: [
@@ -91,8 +91,8 @@ class _OtpState extends State<Otp> {
 
                             alignment: Alignment.bottomRight,
                             child: Padding(
-                              padding:  const EdgeInsets.all(5),
-                              child: Image.asset("logo2.png",scale: 5,),
+                              padding:  const EdgeInsets.all(50),
+                              child: Image.asset("assets/logo2.png",scale: 5,),
 
                             ),
                           )
@@ -103,16 +103,16 @@ class _OtpState extends State<Otp> {
               ),
 
             ),
-            SizedBox(height:height/ 90),
+            const SizedBox(height: 20),
 
             Center(
               child: Padding(
-                padding: const EdgeInsets.all(70),
-                child: Image.asset('login.png'),
+                padding:  const EdgeInsets.only(top: 20,left: 150,right:150),
+                child: Image.asset('assets/top.png'),
               ),
             ),
 
-            SizedBox(height: height/90),
+            const SizedBox(height: 10),
             animatedBorders(),
             SizedBox(height:height/90),
             Row(
@@ -127,14 +127,24 @@ class _OtpState extends State<Otp> {
                 ),
 
                 SizedBox(width: width / 40),
-                Container(
-                  height: height / 14,
-                  width: width / 14,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: notifier.getvisacolor),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                    MaterialPageRoute(builder: (context)=>SignIn(),
+                    ),
+                    );
+
+                  },
+                  child: Container(
+                    height: height / 14,
+                    width: width / 14,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: notifier.getvisacolor),
+                    ),
+                    child: Icon(Icons.edit, size: height / 55,color: notifier.getblack,),
                   ),
-                  child: Icon(Icons.edit, size: height / 55,color: notifier.getblack,),
                 ),
 
               ],
@@ -147,7 +157,7 @@ class _OtpState extends State<Otp> {
                   ),
                 );
               },
-              child: Custombutton.button(primeryColor, EnString.submit, width/2.0),
+              child: Custombutton.button(primeryColor, EnString.verify, width/2.0),
             )
 
           ],
@@ -163,7 +173,7 @@ class _OtpState extends State<Otp> {
     return Container(
       color: Colors.transparent,
       height: height / 14,
-      width: width / 2.0,
+      width: width / 1.5,
       child: PinPut(
         textStyle: TextStyle(
             color: notifier.getblack,

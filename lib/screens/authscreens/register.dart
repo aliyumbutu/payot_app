@@ -73,8 +73,8 @@ class _RegisterState extends State<Register> {
                               child: RichText(
                                 text: const TextSpan(
                                     children: [
-                                      TextSpan(text: 'Sign in \n', style: TextStyle(color: Colors.white,fontSize: 50,fontWeight: FontWeight.bold)),
-                                      TextSpan(text: 'Sign in into your account', style: TextStyle(color: Colors.white,fontSize: 20)),
+                                      TextSpan(text: 'Register\n', style: TextStyle(color: Colors.white,fontSize: 50,fontWeight: FontWeight.bold)),
+                                      TextSpan(text: 'Create your account', style: TextStyle(color: Colors.white,fontSize: 20)),
                                     ]
                                 ),
                               ),
@@ -95,8 +95,8 @@ class _RegisterState extends State<Register> {
 
                             alignment: Alignment.bottomRight,
                             child: Padding(
-                              padding:  EdgeInsets.all(10),
-                              child: Image.asset("logo2.png",scale: 5,),
+                              padding:  const EdgeInsets.all(10),
+                              child: Image.asset("assets/logo2.png",scale: 5,),
 
                             ),
                           )
@@ -110,8 +110,8 @@ class _RegisterState extends State<Register> {
 
             Center(
               child: Padding(
-                padding: const EdgeInsets.all(70),
-                child: Image.asset('login.png'),
+                padding: const EdgeInsets.only(top: 20,left: 100,right:100),
+                child: Image.asset('assets/agreement.png'),
               ),
             ),
 
@@ -150,7 +150,7 @@ class _RegisterState extends State<Register> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  EnString.donthaveanaccount,
+                  EnString.AlreadyHaACC,
                   style: TextStyle(
                     color: notifier.getvisacolor,
                     fontSize: height / 50,
@@ -163,12 +163,12 @@ class _RegisterState extends State<Register> {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>   const Register(),
+                        builder: (context) =>   const SignIn(),
                       ),
                     );
                   },
                   child: Text(
-                    EnString.register,
+                    EnString.login,
                     style: TextStyle(
                       color: const Color(0xFF007cbb),
                       fontSize: height / 50,

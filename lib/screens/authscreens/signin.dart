@@ -69,7 +69,7 @@ class _SignInState extends State<SignIn> {
                           child: Align(
                             alignment: Alignment.bottomLeft,
                             child: Padding(
-                              padding: EdgeInsets.all(25),
+                              padding: const EdgeInsets.all(25),
                               child: RichText(
                                 text: const TextSpan(
                                   children: [
@@ -95,7 +95,7 @@ class _SignInState extends State<SignIn> {
 
                             alignment: Alignment.bottomRight,
                             child: Padding(
-                              padding:  EdgeInsets.all(10),
+                              padding:  const EdgeInsets.all(10),
                               child: Image.asset("assets/logo2.png",scale: 5,),
 
                             ),
@@ -175,7 +175,7 @@ class _SignInState extends State<SignIn> {
                       fontFamily: 'Gilroy_Medium',
                     ),
                   ),
-                )
+                ),
               ],
             )
 

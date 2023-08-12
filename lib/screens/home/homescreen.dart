@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:payonetime/utils/mediaqury.dart';
 import 'package:provider/provider.dart';
 
 import '../../utils/colornotifir.dart';
-import '../../utils/mediaqury.dart';
 import '../authscreens/signin.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Container(
               color: const Color(0xFF007cbb),
-              height: 230,
+              height: 190,
               child: Stack(
                 children: [
                   ClipPath(
@@ -63,17 +62,70 @@ class _HomeScreenState extends State<HomeScreen> {
 
                           )
                       ),
-                      Icon(Icons.remove_red_eye_outlined,size: height / 55,color: notifier.getblack),
                     ],
                   ),
 
 
+
                 ],
               ),
-            )
+            ),
+            SizedBox(height: height/50),
+            Container(
+              width: width/1.1,
+              height: 120,
+              decoration: ShapeDecoration(
+                color: Colors.white.withOpacity(0.7799999713897705),
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(width: 0.50, color: Color(0x8CD1C9C9)),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+
+
+            ),
+            SizedBox(height: height/50),
+            Container(
+              width: width/1.1,
+              height: 120,
+              decoration: ShapeDecoration(
+                color: Colors.white.withOpacity(0.7799999713897705),
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(width: 0.50, color: Color(0x8CD1C9C9)),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+            SizedBox(height: height/50),
+            Container(
+              width: 365,
+              height: 261,
+              decoration: ShapeDecoration(
+                color: Colors.white.withOpacity(0.7799999713897705),
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(width: 0.50, color: Color(0x8CD1C9C9)),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+            SizedBox(height: height/50),
+            Container(
+              width: 203,
+              height: 50,
+              decoration: ShapeDecoration(
+                color: const Color(0xFF007CBB),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+              ),
+            ),
+            SizedBox(height: height/50)
           ],
+
         ),
+
       ),
     );
   }
 }
+

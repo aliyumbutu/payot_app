@@ -279,9 +279,8 @@ class EnString {
   static String get verification => "Verification";
 
   static String get verificationcode => "Verification Code";
-
   static String get wehavetosendthecode =>
-      "We have to send the code verification to\nyour mobile number";
+      "We have to send the code verification to\nyour email Address";
 
   static String get sendagain => "Send Again";
 

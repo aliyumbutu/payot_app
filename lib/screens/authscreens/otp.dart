@@ -72,7 +72,7 @@ class _OtpState extends State<Otp> {
                                 text: const TextSpan(
                                     children: [
                                       TextSpan(text: 'OTP \n', style: TextStyle(color: Colors.white,fontSize: 50,fontWeight: FontWeight.bold)),
-                                      TextSpan(text: 'Check your mobile message to see the verification code', style: TextStyle(color: Colors.white,fontSize: 12)),
+                                      TextSpan(text: 'Check your mobile message to see \nthe verification code', style: TextStyle(color: Colors.white,fontSize: 20)),
                                     ]
                                 ),
                               ),

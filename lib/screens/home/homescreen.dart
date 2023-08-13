@@ -4,12 +4,25 @@ import 'package:provider/provider.dart';
 
 import '../../utils/colornotifir.dart';
 import '../authscreens/signin.dart';
+import '../customescreens/custtomtransaction.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
+
+  static List<Payments> mailList = [
+    Payments(payto: 'Paid to Aliyu Muhammad', date: '12 Jun, 8:30 PM', amount: '-₦100,00'
+
+    ),
+    Payments(payto: 'Send from Aliyu Muhammad', date: '12 Jun, 8:30 PM', amount: '+₦10,000'
+    ),
+
+    Payments(payto: 'Paid to Aliyu Muhammad', date: '12 Jun, 8:30 PM', amount: '-₦30,000'
+    ),
+
+  ];
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -82,8 +95,67 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
 
+            //    child: Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //   children: [
+            //     _buildButtonColumn(notifier.getprimeryColor, Icons.qr_code, 'CALL'),
+            //     _buildButtonColumn(notifier.getprimeryColor, Icons.contact_phone, 'ROUTE'),
+            //     _buildButtonColumn(notifier.getprimeryColor, Icons.house, 'SHARE'),
+            //   ],
+            // ),
 
-            ),
+             child:   Row(
+               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+               children: [
+                 Stack(
+                   children: [
+                     Container(
+                       width: 70,
+                       height: 70,
+                       decoration: ShapeDecoration(
+                         color: notifier.getprimeryColor,
+                         shape: RoundedRectangleBorder(
+                           borderRadius: BorderRadius.circular(15),
+                         ),
+                       ),
+                       child:
+                        Icon(Icons.qr_code_2_outlined,color: notifier.getwihitecolor,size: 40),
+                     ),
+                   ],
+                 ),
+                 Container(
+                   width: 70,
+                   height: 70,
+                   decoration: ShapeDecoration(
+                     color: notifier.getprimeryColor,
+                     shape: RoundedRectangleBorder(
+                       borderRadius: BorderRadius.circular(15),
+                     ),
+                   ),
+                   child:
+                   Icon(Icons.contact_phone,color: notifier.getwihitecolor,size: 40),
+                 ),
+                 Container(
+                   width: 70,
+                   height: 70,
+                   decoration: ShapeDecoration(
+                     color: notifier.getprimeryColor,
+                     shape: RoundedRectangleBorder(
+                       borderRadius: BorderRadius.circular(15),
+                     ),
+                   ),
+                   child:
+                   Icon(Icons.house,color: notifier.getwihitecolor,size: 40),
+                 ),
+               ],
+
+
+             ),
+
+              ),
+
+
+
             SizedBox(height: height/50),
             Container(
               width: width/1.1,
@@ -95,10 +167,57 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
+              child:   Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Stack(
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 70,
+                        decoration: ShapeDecoration(
+                          color: notifier.getprimeryColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                        ),
+                        child:
+                        Icon(Icons.qr_code_2_outlined,color: notifier.getwihitecolor,size: 40),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: 70,
+                    height: 70,
+                    decoration: ShapeDecoration(
+                      color: notifier.getprimeryColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                    child:
+                    Icon(Icons.contact_phone,color: notifier.getwihitecolor,size: 40),
+                  ),
+                  Container(
+                    width: 70,
+                    height: 70,
+                    decoration: ShapeDecoration(
+                      color: notifier.getprimeryColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                    child:
+                    Icon(Icons.house,color: notifier.getwihitecolor,size: 40),
+                  ),
+                ],
+
+
+              ),
             ),
             SizedBox(height: height/50),
             Container(
-              width: 365,
+              width: width/1.1,
               height: 261,
               decoration: ShapeDecoration(
                 color: Colors.white.withOpacity(0.7799999713897705),
@@ -107,6 +226,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
+
+
+
             ),
             SizedBox(height: height/50),
             Container(
@@ -127,5 +249,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
 }
 

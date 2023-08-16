@@ -164,10 +164,22 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "pretty_qr_code",
+      "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/pretty_qr_code-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.13"
+    },
+    {
       "name": "provider",
       "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/provider-6.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "qr",
+      "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/qr-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "shared_preferences",
@@ -183,7 +195,7 @@
     },
     {
       "name": "shared_preferences_foundation",
-      "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.3.2",
+      "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.3.3",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -278,7 +290,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-08-10T19:54:54.382528Z",
+  "generated": "2023-08-16T16:57:12.073643Z",
   "generator": "pub",
   "generatorVersion": "3.0.5"
 }

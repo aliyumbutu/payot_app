@@ -19,6 +19,7 @@ void main() {
       ],
       child:const MaterialApp(
         home:Splashscreen(),
+
         debugShowCheckedModeBanner: false,
       ),
     ),

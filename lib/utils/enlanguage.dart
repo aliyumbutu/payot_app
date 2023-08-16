@@ -3,8 +3,6 @@ class EnString {
 
   static String get login => "Login ";
 
-  static String get category => "Category";
-
   static String get addquestion => "Add Question";
   static String get complatestock => "Complete Stock";
 
@@ -292,7 +290,7 @@ class EnString {
 
   static String get mailid => "Myara@gmail.com";
 
-  static String get editprofile => "Edit Profile";
+  static String get editprofile => "Profile Settings";
 
   static String get notification => "Notification";
 
@@ -302,15 +300,15 @@ class EnString {
 
   static String get language => "Language";
 
-  static String get suggested => "Suggested";
+  static String get kyc => "KYC (Account Upgrade)";
 
-  static String get english => "English (US)";
+  static String get statement  => " Download statement";
 
-  static String get englishuk => "English (UK)";
+  static String get changepss => " Change Passcode";
 
-  static String get mandarin => "Mandarin";
+  static String get accLmt => "Account Limit";
 
-  static String get hindi => "Hindi";
+  static String get help => "Help";
 
   static String get spanish => "Spanish";
 
@@ -353,29 +351,11 @@ class EnString {
 
   static String get collection => "Collection";
 
-  static String get about => "About";
-
-  static String get senioruiuxdesigneratgoogle => "Senior UI Designer";
-
-  static String get aboutcorse => "About Course";
+  static String get about => "About Us";
 
   static String get tools => "Tools";
 
   static String get lorem =>
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
-  static String get figma => "Figma";
-
-  static String get whyusingfigma => "Why Using Figma";
-
-  static String get setupyourfigmaaccount => "Set up Your Figma Account";
-
-  static String get student => "Student";
-
-
-  static String get freelancer => "Freelancer";
-
-
-  static String get awesome =>
-      "Awesome! this is what i was looking for, i recommend to everyone ❤️❤️";
 }

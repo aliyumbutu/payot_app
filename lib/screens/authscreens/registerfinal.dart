@@ -187,7 +187,7 @@ class _RegisterFinalState extends State<RegisterFinal> {
             GestureDetector(
               onTap: (){
                 Navigator.push(context,
-                  MaterialPageRoute(builder: (context)=>const HomeScreen(),
+                  MaterialPageRoute(builder: (context)=> const HomeScreen(),
                   ),
                 );
               },

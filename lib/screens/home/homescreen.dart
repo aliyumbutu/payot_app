@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:payonetime/screens/home/airtimerecharge.dart';
+import 'package:payonetime/screens/home/scanandpay.dart';
 import 'package:payonetime/utils/mediaqury.dart';
 import 'package:provider/provider.dart';
 
+import '../../utils/color.dart';
 import '../../utils/colornotifir.dart';
 import '../authscreens/signin.dart';
-import '../customescreens/custtomtransaction.dart';
+import '../customescreens/custtombutton.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,17 +16,7 @@ class HomeScreen extends StatefulWidget {
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 
-  static List<Payments> mailList = [
-    Payments(payto: 'Paid to Aliyu Muhammad', date: '12 Jun, 8:30 PM', amount: '-₦100,00'
 
-    ),
-    Payments(payto: 'Send from Aliyu Muhammad', date: '12 Jun, 8:30 PM', amount: '+₦10,000'
-    ),
-
-    Payments(payto: 'Paid to Aliyu Muhammad', date: '12 Jun, 8:30 PM', amount: '-₦30,000'
-    ),
-
-  ];
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -36,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Container(
               color: const Color(0xFF007cbb),
-              height: 190,
+              height: 170,
               child: Stack(
                 children: [
                   ClipPath(
@@ -56,12 +50,41 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   Column(
+
                     children: [
+                      const SizedBox(height: 30,),
+                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                        IconButton(
+                            onPressed: (){
+
+                            },
+                            icon: const Icon(Icons.account_circle,size: 50,color: Colors.white,))
+                        ],
+
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          IconButton(onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const ScanAndPay()
+                            ),);
+                          },
+                              icon:const Icon(Icons.notifications,size: 30,color: Colors.white,)),
+                          IconButton(onPressed: (){},
+                              icon: const Icon(Icons.help,size: 30,color: Colors.white,))
+
+                        ],
+                      ),
+
                       Expanded(
                           child: Align(
                             alignment: Alignment.bottomLeft,
                             child: Padding(
-                              padding: const EdgeInsets.all(25),
+                              padding: const EdgeInsets.only(left: 20),
                               child: RichText(
                                 text: const TextSpan(
                                     children: [
@@ -75,7 +98,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                           )
                       ),
+
                     ],
+
                   ),
 
 
@@ -84,141 +109,51 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: height/50),
-            Container(
-              width: width/1.1,
-              height: 120,
-              decoration: ShapeDecoration(
-                color: Colors.white.withOpacity(0.7799999713897705),
-                shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 0.50, color: Color(0x8CD1C9C9)),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
 
-            //    child: Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //   children: [
-            //     _buildButtonColumn(notifier.getprimeryColor, Icons.qr_code, 'CALL'),
-            //     _buildButtonColumn(notifier.getprimeryColor, Icons.contact_phone, 'ROUTE'),
-            //     _buildButtonColumn(notifier.getprimeryColor, Icons.house, 'SHARE'),
-            //   ],
-            // ),
-
-             child:   Row(
-               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-               children: [
-                 Stack(
-                   children: [
-                     Container(
-                       width: 70,
-                       height: 70,
-                       decoration: ShapeDecoration(
-                         color: notifier.getprimeryColor,
-                         shape: RoundedRectangleBorder(
-                           borderRadius: BorderRadius.circular(15),
-                         ),
-                       ),
-                       child:
-                        Icon(Icons.qr_code_2_outlined,color: notifier.getwihitecolor,size: 40),
-                     ),
-                   ],
-                 ),
-                 Container(
-                   width: 70,
-                   height: 70,
-                   decoration: ShapeDecoration(
-                     color: notifier.getprimeryColor,
-                     shape: RoundedRectangleBorder(
-                       borderRadius: BorderRadius.circular(15),
-                     ),
-                   ),
-                   child:
-                   Icon(Icons.contact_phone,color: notifier.getwihitecolor,size: 40),
-                 ),
-                 Container(
-                   width: 70,
-                   height: 70,
-                   decoration: ShapeDecoration(
-                     color: notifier.getprimeryColor,
-                     shape: RoundedRectangleBorder(
-                       borderRadius: BorderRadius.circular(15),
-                     ),
-                   ),
-                   child:
-                   Icon(Icons.house,color: notifier.getwihitecolor,size: 40),
-                 ),
-               ],
-
-
-             ),
-
-              ),
-
-
-
-            SizedBox(height: height/50),
-            Container(
-              width: width/1.1,
-              height: 120,
-              decoration: ShapeDecoration(
-                color: Colors.white.withOpacity(0.7799999713897705),
-                shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 0.50, color: Color(0x8CD1C9C9)),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-              child:   Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Stack(
+                Container(
+                  width: width/1.1,
+                  height: 130,
+                  decoration: ShapeDecoration(
+                    color: Colors.white.withOpacity(0.7799999713897705),
+                    shape: RoundedRectangleBorder(
+                      side: const BorderSide(width: 0.50, color: Color(0x8CD1C9C9)),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child:  Stack(
                     children: [
-                      Container(
-                        width: 70,
-                        height: 70,
-                        decoration: ShapeDecoration(
-                          color: notifier.getprimeryColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15),
+                       const Padding(
+                         padding: EdgeInsets.only(left: 20,top: 10),
+                         child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'Money Transfer',
+                            style: TextStyle(
+                              color: Color(0xFF5E5353),
+                              fontSize: 15,
+                              fontFamily: 'Gilroy_Medium',
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        child:
-                        Icon(Icons.qr_code_2_outlined,color: notifier.getwihitecolor,size: 40),
+                      ),
+                       ),
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          _buildButtonColumn(notifier.getwihitecolor, notifier.getblack,Icons.qr_code_rounded, 'Scan & Pay'),
+                          _buildButtonColumn(notifier.getwihitecolor, notifier.getblack,Icons.contact_phone, 'To number'),
+                          _buildButtonColumn(notifier.getwihitecolor, notifier.getblack,Icons.house, 'To Bank'),
+                        ],
                       ),
                     ],
                   ),
-                  Container(
-                    width: 70,
-                    height: 70,
-                    decoration: ShapeDecoration(
-                      color: notifier.getprimeryColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                    ),
-                    child:
-                    Icon(Icons.contact_phone,color: notifier.getwihitecolor,size: 40),
                   ),
-                  Container(
-                    width: 70,
-                    height: 70,
-                    decoration: ShapeDecoration(
-                      color: notifier.getprimeryColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                    ),
-                    child:
-                    Icon(Icons.house,color: notifier.getwihitecolor,size: 40),
-                  ),
-                ],
 
-
-              ),
-            ),
             SizedBox(height: height/50),
             Container(
               width: width/1.1,
-              height: 261,
+              height: 130,
               decoration: ShapeDecoration(
                 color: Colors.white.withOpacity(0.7799999713897705),
                 shape: RoundedRectangleBorder(
@@ -226,27 +161,103 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
+              child:  Stack(
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20,top: 10),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        'Recharge & Bills',
+                        style: TextStyle(
+                          color: Color(0xFF5E5353),
+                          fontSize: 15,
+                          fontFamily: 'Gilroy_Medium',
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
 
-
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      _buildButtonColumn(notifier.getwihitecolor, notifier.getblack,Icons.phone_android_rounded, 'Airtime'),
+                      _buildButtonColumn(notifier.getwihitecolor, notifier.getblack,Icons.map_rounded, 'Internet'),
+                      _buildButtonColumn(notifier.getwihitecolor, notifier.getblack,Icons.light
+                          , 'Electricity'),
+                    ],
+                  ),
+                ],
+              ),
 
             ),
-            SizedBox(height: height/50),
-            Container(
-              width: 203,
-              height: 50,
-              decoration: ShapeDecoration(
-                color: const Color(0xFF007CBB),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
+            SizedBox(height: height/70),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                width: width/1.1,
+                height: 261,
+                decoration: ShapeDecoration(
+                  color: Colors.white.withOpacity(0.7799999713897705),
+                  shape: RoundedRectangleBorder(
+                    side: const BorderSide(width: 0.50, color: Color(0x8CD1C9C9)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
+
+
               ),
             ),
+            SizedBox(height: height/70),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=>const AirtimeRecharge(),
+                  ),
+                );
+              },
+
+              child: Custombuttonico.button(primeryColor, "Scan & Pay", width/2.0,const EdgeInsets.only(left: 50))),
+
             SizedBox(height: height/50)
           ],
 
         ),
 
       ),
+    );
+  }
+  Column _buildButtonColumn(Color color,  color1, IconData icon, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const SizedBox(height: 30),
+        Container(
+            width: 70,
+            height: 70,
+            decoration: ShapeDecoration(
+              color: notifier.getprimeryColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+            ),
+            child:
+        Icon(icon, color: color)),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontFamily: "Gilroy-Medium",
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+              color: color1,
+            ),
+          ),
+        ),
+      ],
     );
   }
 

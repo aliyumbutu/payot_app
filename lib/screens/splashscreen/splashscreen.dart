@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../payments/passcoderequest.dart';
 import '../../utils/colornotifir.dart';
-import '../../utils/enlanguage.dart';
 import '../../utils/mediaqury.dart';
-import '../authscreens/signin.dart';
+
 
 
 class Splashscreen extends StatefulWidget {
@@ -26,7 +26,7 @@ class _SplashscreenState extends State<Splashscreen> {
           () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const SignIn(),
+          builder: (context) => const PasscodeRequest(),
         ),
       ),
     );

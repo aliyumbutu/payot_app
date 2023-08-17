@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:payonetime/screens/authscreens/registerfinal.dart';
 import 'package:payonetime/screens/authscreens/signin.dart';
-import 'package:pinput/pin_put/pin_put.dart';
+import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -70,6 +70,7 @@ class _OtpState extends State<Otp> {
                               padding: const EdgeInsets.all(25),
                               child: RichText(
                                 text: const TextSpan(
+
                                     children: [
                                       TextSpan(text: 'OTP \n', style: TextStyle(color: Colors.white,fontSize: 50,fontWeight: FontWeight.bold)),
                                       TextSpan(text: 'Check your mobile message to see \nthe verification code', style: TextStyle(color: Colors.white,fontSize: 20)),
@@ -91,7 +92,7 @@ class _OtpState extends State<Otp> {
 
                             alignment: Alignment.bottomRight,
                             child: Padding(
-                              padding:  const EdgeInsets.all(50),
+                              padding:  const EdgeInsets.all(5),
                               child: Image.asset("assets/logo2.png",scale: 5,),
 
                             ),
@@ -113,13 +114,13 @@ class _OtpState extends State<Otp> {
             ),
 
             const SizedBox(height: 10),
-            animatedBorders(),
+            Pinput(),
             SizedBox(height:height/90),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "+01-202-555-0102",
+                  "+234-813-533-343",
                   style: TextStyle(
                       fontSize: height / 40,
                       fontFamily: 'Gilroy_Bold',
@@ -169,39 +170,15 @@ class _OtpState extends State<Otp> {
 
     );
   }
-  Widget animatedBorders() {
-    return Container(
-      color: Colors.transparent,
-      height: height / 14,
-      width: width / 1.5,
-      child: PinPut(
-        textStyle: TextStyle(
-            color: notifier.getblack,
-            fontFamily: "Gilroy Bold",
-            fontSize: height / 40),
-        fieldsCount: 4,
-        eachFieldWidth: width / 10,
-        withCursor: false,
-        submittedFieldDecoration: BoxDecoration(
-            color: notifier.getprimeryColor,
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: notifier.getprimeryColor))
-            .copyWith(
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: notifier.getprimeryColor)),
-        selectedFieldDecoration: BoxDecoration(
-            color: notifier.getwihitecolor,
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: notifier.getprimeryColor)),
-        followingFieldDecoration: BoxDecoration(
-          border: Border.all(color: notifier.getprimeryColor),
-          color: notifier.getwihitecolor,
-          borderRadius: BorderRadius.circular(10.0),
-        ).copyWith(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-      ),
+  Widget builPinput(){
+    return Pinput(
+      pinAnimationType: PinAnimationType.rotation,
+      onCompleted: (pin)=>print(pin),
+
+
     );
+
+
   }
 
 }

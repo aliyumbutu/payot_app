@@ -147,15 +147,15 @@
     },
     {
       "name": "pinput",
-      "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/pinput-1.2.0",
+      "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/pinput-3.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.15"
     },
     {
       "name": "platform",
-      "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/platform-3.1.0",
+      "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/platform-3.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "plugin_platform_interface",
@@ -230,6 +230,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "smart_auth",
+      "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/smart_auth-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
       "name": "source_span",
       "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/source_span-1.9.1",
       "packageUri": "lib/",
@@ -266,6 +272,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "universal_platform",
+      "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/universal_platform-1.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///Users/macuser/Documents/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
@@ -290,7 +302,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-08-16T16:57:12.073643Z",
+  "generated": "2023-08-17T10:57:16.696014Z",
   "generator": "pub",
   "generatorVersion": "3.0.5"
 }

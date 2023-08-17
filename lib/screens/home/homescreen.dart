@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:payonetime/screens/home/airtimerecharge.dart';
-import 'package:payonetime/screens/home/scanandpay.dart';
+import 'package:payonetime/screens/authscreens/setpasscode.dart';
+import 'package:payonetime/screens/home/settings.dart';
+
 import 'package:payonetime/utils/mediaqury.dart';
 import 'package:provider/provider.dart';
-
 import '../../utils/color.dart';
 import '../../utils/colornotifir.dart';
 import '../authscreens/signin.dart';
@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           IconButton(onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const ScanAndPay()
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const Setting()
                             ),);
                           },
                               icon:const Icon(Icons.notifications,size: 30,color: Colors.white,)),
@@ -213,7 +213,7 @@ class _HomeScreenState extends State<HomeScreen> {
             GestureDetector(
               onTap: (){
                 Navigator.push(context,
-                  MaterialPageRoute(builder: (context)=>const AirtimeRecharge(),
+                  MaterialPageRoute(builder: (context)=>const SetPascscode(),
                   ),
                 );
               },

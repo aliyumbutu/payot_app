@@ -1,17 +1,29 @@
-payonetime.ng.payonetime.app-jetified-window-1.0.0-beta04-0 /Users/macuser/Documents/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/res
-payonetime.ng.payonetime.app-jetified-play-services-basement-18.1.0-1 /Users/macuser/Documents/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/res
-payonetime.ng.payonetime.app-jetified-annotation-experimental-1.1.0-2 /Users/macuser/Documents/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/res
-payonetime.ng.payonetime.app-core-1.6.0-3 /Users/macuser/Documents/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/res
-payonetime.ng.payonetime.app-jetified-play-services-auth-20.4.0-4 /Users/macuser/Documents/.gradle/caches/transforms-3/9fbd8b6fada67877222f712826ad1a35/transformed/jetified-play-services-auth-20.4.0/res
-payonetime.ng.payonetime.app-jetified-play-services-base-18.0.1-5 /Users/macuser/Documents/.gradle/caches/transforms-3/aba8f806953ea3dd8f794da3aeb78a12/transformed/jetified-play-services-base-18.0.1/res
-payonetime.ng.payonetime.app-jetified-window-java-1.0.0-beta04-6 /Users/macuser/Documents/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/res
-payonetime.ng.payonetime.app-debug-7 /Users/macuser/Documents/Documents/Payot_App main/payot_app/android/app/src/debug/res
-payonetime.ng.payonetime.app-main-8 /Users/macuser/Documents/Documents/Payot_App main/payot_app/android/app/src/main/res
-payonetime.ng.payonetime.app-pngs-9 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/generated/res/pngs/debug
-payonetime.ng.payonetime.app-resValues-10 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/generated/res/resValues/debug
-payonetime.ng.payonetime.app-rs-11 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/generated/res/rs/debug
-payonetime.ng.payonetime.app-mergeDebugResources-12 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
-payonetime.ng.payonetime.app-mergeDebugResources-13 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
-payonetime.ng.payonetime.app-merged_res-14 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/intermediates/merged_res/debug
-payonetime.ng.payonetime.app-packaged_res-15 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/shared_preferences_android/intermediates/packaged_res/debug
-payonetime.ng.payonetime.app-packaged_res-16 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/smart_auth/intermediates/packaged_res/debug
+payonetime.ng.payonetime.app-appcompat-1.4.2-0 /Users/macuser/Documents/.gradle/caches/transforms-3/23f34eb679aa78d319ba4cd6be929827/transformed/appcompat-1.4.2/res
+payonetime.ng.payonetime.app-jetified-window-1.0.0-beta04-1 /Users/macuser/Documents/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/res
+payonetime.ng.payonetime.app-jetified-appcompat-resources-1.4.2-2 /Users/macuser/Documents/.gradle/caches/transforms-3/38a9a6cdcae139f766ff4a425b10d775/transformed/jetified-appcompat-resources-1.4.2/res
+payonetime.ng.payonetime.app-jetified-zxing-android-embedded-4.3.0-3 /Users/macuser/Documents/.gradle/caches/transforms-3/421d44eefcaeaaf501208e31a906b756/transformed/jetified-zxing-android-embedded-4.3.0/res
+payonetime.ng.payonetime.app-jetified-startup-runtime-1.0.0-4 /Users/macuser/Documents/.gradle/caches/transforms-3/51ebb132c7fa329ff7b390804f6d4148/transformed/jetified-startup-runtime-1.0.0/res
+payonetime.ng.payonetime.app-jetified-savedstate-1.1.0-5 /Users/macuser/Documents/.gradle/caches/transforms-3/5210929c6bf1b640a57ff02b8ff864f4/transformed/jetified-savedstate-1.1.0/res
+payonetime.ng.payonetime.app-core-1.7.0-6 /Users/macuser/Documents/.gradle/caches/transforms-3/57d13c65eae90a7945dea98c1aa2b720/transformed/core-1.7.0/res
+payonetime.ng.payonetime.app-jetified-play-services-basement-18.1.0-7 /Users/macuser/Documents/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/res
+payonetime.ng.payonetime.app-jetified-annotation-experimental-1.1.0-8 /Users/macuser/Documents/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/res
+payonetime.ng.payonetime.app-fragment-1.3.6-9 /Users/macuser/Documents/.gradle/caches/transforms-3/86302acde65cdee925f535b0bf1f911d/transformed/fragment-1.3.6/res
+payonetime.ng.payonetime.app-lifecycle-runtime-2.4.0-10 /Users/macuser/Documents/.gradle/caches/transforms-3/8b0701ddf8e6425246b70e14fe9cd6cc/transformed/lifecycle-runtime-2.4.0/res
+payonetime.ng.payonetime.app-jetified-play-services-auth-20.4.0-11 /Users/macuser/Documents/.gradle/caches/transforms-3/9fbd8b6fada67877222f712826ad1a35/transformed/jetified-play-services-auth-20.4.0/res
+payonetime.ng.payonetime.app-jetified-emoji2-1.0.0-12 /Users/macuser/Documents/.gradle/caches/transforms-3/a282641d604ecb4ae5332e32c2c94657/transformed/jetified-emoji2-1.0.0/res
+payonetime.ng.payonetime.app-jetified-play-services-base-18.0.1-13 /Users/macuser/Documents/.gradle/caches/transforms-3/aba8f806953ea3dd8f794da3aeb78a12/transformed/jetified-play-services-base-18.0.1/res
+payonetime.ng.payonetime.app-jetified-window-java-1.0.0-beta04-14 /Users/macuser/Documents/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/res
+payonetime.ng.payonetime.app-jetified-emoji2-views-helper-1.0.0-15 /Users/macuser/Documents/.gradle/caches/transforms-3/ce706fb8171f1e87b711ab97547bd840/transformed/jetified-emoji2-views-helper-1.0.0/res
+payonetime.ng.payonetime.app-lifecycle-viewmodel-2.3.1-16 /Users/macuser/Documents/.gradle/caches/transforms-3/d486eee418567504419697de2b3eb487/transformed/lifecycle-viewmodel-2.3.1/res
+payonetime.ng.payonetime.app-jetified-lifecycle-process-2.4.0-17 /Users/macuser/Documents/.gradle/caches/transforms-3/f31cdfb213b879077c244df043816118/transformed/jetified-lifecycle-process-2.4.0/res
+payonetime.ng.payonetime.app-debug-18 /Users/macuser/Documents/Documents/Payot_App main/payot_app/android/app/src/debug/res
+payonetime.ng.payonetime.app-main-19 /Users/macuser/Documents/Documents/Payot_App main/payot_app/android/app/src/main/res
+payonetime.ng.payonetime.app-pngs-20 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/generated/res/pngs/debug
+payonetime.ng.payonetime.app-resValues-21 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/generated/res/resValues/debug
+payonetime.ng.payonetime.app-rs-22 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/generated/res/rs/debug
+payonetime.ng.payonetime.app-mergeDebugResources-23 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+payonetime.ng.payonetime.app-mergeDebugResources-24 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+payonetime.ng.payonetime.app-merged_res-25 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/app/intermediates/merged_res/debug
+payonetime.ng.payonetime.app-packaged_res-26 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/qr_code_scanner/intermediates/packaged_res/debug
+payonetime.ng.payonetime.app-packaged_res-27 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/shared_preferences_android/intermediates/packaged_res/debug
+payonetime.ng.payonetime.app-packaged_res-28 /Users/macuser/Documents/Documents/Payot_App main/payot_app/build/smart_auth/intermediates/packaged_res/debug

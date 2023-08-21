@@ -15,7 +15,7 @@ class Custombutton {
           ),
           color: clr,
         ),
-        height: height / 15,
+        height: height / 20,
         width: wid,
         child: Center(
           child: Text(
@@ -23,7 +23,7 @@ class Custombutton {
             style: TextStyle(
                 color: Colors.white,
                 fontSize: height / 50,
-                fontFamily: 'Gilroy_Medium'),
+                fontFamily: 'Kufam_Medium'),
           ),
         ),
       ),
@@ -48,13 +48,13 @@ class Custombuttonico{
           children: [
 
             Container(
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.center,
               margin: const EdgeInsets.only(left: 20),
 
-               child: const Icon(Icons.qr_code_rounded,color: Colors.white,),
+               child: const Icon(Icons.qr_code_rounded,color: Colors.white,size: 30,),
 
             ),
-            const SizedBox(width: 20,),
+            const SizedBox(width: 5,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
@@ -62,7 +62,7 @@ class Custombuttonico{
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: height / 50,
-                    fontFamily: 'Gilroy_Medium'),
+                    fontFamily: 'Kufam_Medium'),
               ),
             ),
 

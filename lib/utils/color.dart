@@ -15,6 +15,9 @@ Color backgrounddark= const Color(0xffacafc3);
 Color black=   Colors.black;
 Color darkblack=   Colors.white;
 
+Color red=   Colors.red;
+Color darkred=   Colors.red;
+
 
 
 Color cardcolor=   Colors.white;

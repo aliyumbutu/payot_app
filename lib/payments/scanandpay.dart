@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 import '../utils/colornotifir.dart';
+import '../utils/mediaqury.dart';
 
 
 class ScanAndPay extends StatefulWidget {
@@ -23,6 +24,9 @@ class _ScanAndPay extends State<ScanAndPay> {
   @override
   Widget build(BuildContext context) {
     notifier = Provider.of<ColorNotifier>(context, listen: true);
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
+
     controller?.resumeCamera();
     // const size = MediaQuery.of(context).size;
     // height = MediaQuery.of(context).size.height,

@@ -38,6 +38,8 @@ class _SplashscreenState extends State<Splashscreen> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     notifier = Provider.of<ColorNotifier>(context, listen: true);
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: notifier.getbackgroudcolor,

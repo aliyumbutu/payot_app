@@ -27,6 +27,8 @@ class _SendToNumberState extends State<SendToNumber> {
 
   Widget build(BuildContext context) {
     var notifier = Provider.of<ColorNotifier>(context, listen: true);
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: notifier.getprimeryColor,

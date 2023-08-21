@@ -25,6 +25,8 @@ class _PasscodeRequestState extends State<PasscodeRequest> {
   @override
   Widget build(BuildContext context) {
     var notifier = Provider.of<ColorNotifier>(context, listen: true);
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: notifier.getprimeryColor,
@@ -41,7 +43,6 @@ class _PasscodeRequestState extends State<PasscodeRequest> {
           EnString.passcoderequest,
           style: TextStyle(
             color: notifier.getwihitecolor,
-            fontSize: height / 40,
             fontFamily: 'Kufam_Medium',
           ),
         ),
@@ -64,7 +65,7 @@ class _PasscodeRequestState extends State<PasscodeRequest> {
               Container(
                 margin: const EdgeInsets.only(top: 20),
 
-                width: width / 4.0,
+                width: width / 10.0,
                 height: height / 8,
                 decoration: ShapeDecoration(
                   color: const Color(0xFFCFE8F2),

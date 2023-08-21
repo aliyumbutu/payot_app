@@ -25,6 +25,8 @@ class _SendWithQrCodeState extends State<SendWithQrCode> {
   @override
   Widget build(BuildContext context) {
     var notifier = Provider.of<ColorNotifier>(context, listen: true);
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: notifier.getprimeryColor,

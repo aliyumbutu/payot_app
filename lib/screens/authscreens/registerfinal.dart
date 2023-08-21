@@ -20,15 +20,18 @@ class RegisterFinal extends StatefulWidget {
 
 class _RegisterFinalState extends State<RegisterFinal> {
   late ColorNotifier notifier;
+  TextEditingController firstName = TextEditingController();
+  TextEditingController lastName  = TextEditingController();
+  TextEditingController dateOfBirth  = TextEditingController();
+  TextEditingController Gender  = TextEditingController();
 
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController firstName = TextEditingController();
-    TextEditingController lastName  = TextEditingController();
-    TextEditingController dateOfBirth  = TextEditingController();
-    TextEditingController Gender  = TextEditingController();
+
     notifier = Provider.of<ColorNotifier>(context, listen: true);
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

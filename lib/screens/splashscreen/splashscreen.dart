@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:payonetime/screens/authscreens/signin.dart';
 import 'package:provider/provider.dart';
-import '../../payments/passcoderequest.dart';
 import '../../utils/colornotifir.dart';
 import '../../utils/mediaqury.dart';
+
 
 
 
@@ -26,7 +27,7 @@ class _SplashscreenState extends State<Splashscreen> {
           () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const PasscodeRequest(),
+          builder: (context) =>  SignIn(),
         ),
       ),
     );

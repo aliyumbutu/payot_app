@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:payonetime/payments/passcoderequest.dart';
+import 'package:payonetime/screens/home/help.dart';
 import 'package:provider/provider.dart';
 
 import '../screens/customescreens/customtextfild.dart';
@@ -30,18 +32,17 @@ class _SendtoBankState extends State<SendtoBank> {
         backgroundColor: notifier.getprimeryColor,
         actions: [
           IconButton(onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Setting()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Help()));
           },
-              icon: const Icon(Icons.help_outline))
+              icon: const Icon(Icons.help))
 
         ],
         centerTitle: false,
-        title: Text(
-          EnString.verification,
+        title: Text("Send to Bank",
           style: TextStyle(
             color: notifier.getwihitecolor,
-            fontSize: height / 40,
-            fontFamily: 'Gilroy_Bold',
+            //fontSize: height / 40,
+            fontFamily: 'Kufam_Medium',
           ),
         ),
       ),
@@ -49,7 +50,7 @@ class _SendtoBankState extends State<SendtoBank> {
         child: Container(
           margin: const EdgeInsets.all(20),
           width: width/1.0,
-          height: height/1.9,
+          height: height/1.5,
           decoration: ShapeDecoration(
             color: Colors.white.withOpacity(0.7799999713897705),
             shape:RoundedRectangleBorder(
@@ -61,94 +62,94 @@ class _SendtoBankState extends State<SendtoBank> {
             children: [
               const SizedBox(height: 30,),
               Container(
-                margin: const EdgeInsets.only(left: 10,right: 10,),
+                  margin: const EdgeInsets.only(left: 20,right:20),
+                  child: Customtextbox.textField(
+                    SelectBank,
+                    EnString.slcbk,
+                    notifier.getvisacolor,
+                    notifier.getvisacolor,
+                    height / 12,
+                    width / 1.1,
+                    TextInputType.text,
 
-                child: Customtextfild.textField(
-                  SelectBank,
-                  EnString.FirstName,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getblack,
-                  notifier.getvisacolor,
-                  height / 12,
-                  width / 1.1,
-                  EnString.number,
-                  notifier.getvisacolor,
-                  keyboardType: TextInputType.text,
-                ),
+
+                  )
               ),
+              const SizedBox(height: 20,),
+
               Container(
-                margin: const EdgeInsets.only(left: 10,right: 10,),
+                  margin: const EdgeInsets.only(left: 20,right:20),
+                  child: Customtextbox.textField(
+                    AccountNumber,
+                    EnString.accnum,
+                    notifier.getvisacolor,
+                    notifier.getvisacolor,
+                    height / 12,
+                    width / 1.1,
+                    TextInputType.number,
 
-                child: Customtextfild.textField(
-                  AccountNumber,
-                  EnString.FirstName,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getblack,
-                  notifier.getvisacolor,
-                  height / 12,
-                  width / 1.1,
-                  EnString.number,
-                  notifier.getvisacolor,
-                  keyboardType: TextInputType.text,
-                ),
+
+                  )
               ),
+              const SizedBox(height: 20,),
+
+
               Row(
                 children: [
                   Container(
                     margin: const EdgeInsets.only(left: 20),
-                    child: const Text(
-                      "Aliyu Muhammad"
+                    child:  const Text(
+                      "Aliyu Muhammad",
+                      style: TextStyle(
+                        fontFamily: "Kufam_Medium",
+                        fontSize: 20,
+                        color: Color(0xFF1587c1),
+
+                      ),
                     ),
                   )
                 ],
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Container(
-                margin: const EdgeInsets.only(left: 10,right: 10,),
+                  margin: const EdgeInsets.only(left: 20,right:20),
+                  child: Customtextbox.textField(
+                    Amount,
+                    EnString.amount,
+                    notifier.getvisacolor,
+                    notifier.getvisacolor,
+                    height /12,
+                    width / 1.1,
+                    TextInputType.number,
 
-                child: Customtextfild.textField(
-                  Amount,
-                  EnString.FirstName,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getblack,
-                  notifier.getvisacolor,
-                  height / 12,
-                  width / 1.1,
-                  EnString.number,
-                  notifier.getvisacolor,
-                  keyboardType: TextInputType.text,
-                ),
+
+                  )
               ),
+
+              const SizedBox(height: 20,),
               Container(
-                margin: const EdgeInsets.only(left: 10,right: 10,),
+                  margin: const EdgeInsets.only(left: 20,right:20),
+                  child: Customtextbox.textField(
+                    AddComment,
+                    EnString.addcommt,
+                    notifier.getvisacolor,
+                    notifier.getvisacolor,
+                    height / 12,
+                    width / 1.1,
+                    TextInputType.text,
 
-                child: Customtextfild.textField(
-                  AddComment,
-                  EnString.FirstName,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getblack,
-                  notifier.getvisacolor,
-                  height / 12,
-                  width / 1.1,
-                  EnString.number,
-                  notifier.getvisacolor,
-                  keyboardType: TextInputType.text,
-                ),
+
+                  )
               ),
+              const SizedBox(height: 20,),
+
 
               GestureDetector(
                 onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const PasscodeRequest()));
 
                 },
-                child: Custombutton.button(notifier.getprimeryColor, EnString.login,width/1.2),
+                child: Custombutton.button(notifier.getprimeryColor, EnString.proceed,width/1.2),
               )
 
 

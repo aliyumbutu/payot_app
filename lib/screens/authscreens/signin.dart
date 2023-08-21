@@ -21,17 +21,9 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   late ColorNotifier notifier;
+  
 
-  getdarkmodepreviousstate() async {
 
-    final prefs = await SharedPreferences.getInstance();
-    bool? previusstate = prefs.getBool("setIsDark");
-    if (previusstate == null) {
-      notifier.setIsDark = false;
-    } else {
-      notifier.setIsDark = previusstate;
-    }
-  }
   @override
   Widget build(BuildContext context) {
     TextEditingController number = TextEditingController();
@@ -73,8 +65,8 @@ class _SignInState extends State<SignIn> {
                               child: RichText(
                                 text: const TextSpan(
                                   children: [
-                                    TextSpan(text: 'Sign in \n', style: TextStyle(color: Colors.white,fontSize: 50,fontWeight: FontWeight.bold)),
-                                    TextSpan(text: 'Sign in into your account', style: TextStyle(color: Colors.white,fontSize: 20)),
+                                    TextSpan(text: 'Sign in \n', style: TextStyle(color: Colors.white,fontSize: 50,fontFamily: "Kufam_Bold")),
+                                    TextSpan(text: 'Sign in into your account', style: TextStyle(color: Colors.white,fontSize: 20,fontFamily: "Kufam_Medium")),
                                   ]
                                 ),
                               ),
@@ -118,22 +110,17 @@ class _SignInState extends State<SignIn> {
             SizedBox(height:height/90),
 
             Container(
-              alignment: Alignment.center,
-              child: Customtextfild.textField(
+              child: Customtextbox.textField(
+                  number,
+                  EnString.number,
+                  notifier.getvisacolor,
+                  notifier.getvisacolor,
+                  height / 12,
+                  width / 1.1,
+                  TextInputType.phone,
 
-                number,
-                EnString.number,
-                notifier.getvisacolor,
-                notifier.getvisacolor,
-                notifier.getvisacolor,
-                notifier.getblack,
-                notifier.getvisacolor,
-                height / 12,
-                width / 1.1,
-                EnString.number,
-                notifier.getvisacolor,
-                keyboardType: TextInputType.number,
-              ),
+
+                 )
             ),
           SizedBox(height: height/30),
             GestureDetector(
@@ -143,18 +130,18 @@ class _SignInState extends State<SignIn> {
                     ),
                 );
               },
-                child: Custombutton.button(primeryColor, EnString.submit, width/1.1),
+                child: Custombutton.button(primeryColor, EnString.sigin, width/1.1),
             ),
             SizedBox(height: height / 22),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  EnString.donthaveanaccount,
+                  EnString.donhaveacc,
                   style: TextStyle(
                     color: notifier.getvisacolor,
                     fontSize: height / 50,
-                    fontFamily: 'Gilroy_Medium',
+                    fontFamily: 'Kufan_Medium,',
                   ),
                 ),
                 SizedBox(width: width / 70),
@@ -172,7 +159,7 @@ class _SignInState extends State<SignIn> {
                     style: TextStyle(
                       color: const Color(0xFF007cbb),
                       fontSize: height / 50,
-                      fontFamily: 'Gilroy_Medium',
+                      fontFamily: 'Kufam_Medium',
                     ),
                   ),
                 ),

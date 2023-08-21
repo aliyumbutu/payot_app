@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:payonetime/screens/home/paymentcomple.dart';
 import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 
@@ -32,16 +33,16 @@ class _PasscodeRequestState extends State<PasscodeRequest> {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const Setting()));
           },
-              icon: const Icon(Icons.help_outline))
+              icon: const Icon(Icons.help))
 
         ],
         centerTitle: false,
         title: Text(
-          EnString.verification,
+          EnString.passcoderequest,
           style: TextStyle(
             color: notifier.getwihitecolor,
             fontSize: height / 40,
-            fontFamily: 'Gilroy_Bold',
+            fontFamily: 'Kufam_Medium',
           ),
         ),
       ),
@@ -74,9 +75,9 @@ class _PasscodeRequestState extends State<PasscodeRequest> {
               ),
               const SizedBox(height: 20,),
 
-              const Text('Paying to : Aliya Muhammad',
-                style: TextStyle(
-                  fontFamily: "Gilroy-Medium",
+               Text("Paying to: ${EnString.aliyu}",
+                style: const TextStyle(
+                  fontFamily: "Kufam_Medium",
                   fontSize: 20,
 
 
@@ -84,27 +85,27 @@ class _PasscodeRequestState extends State<PasscodeRequest> {
               const SizedBox(height: 10,),
               const Text('Mobile Number:0804853829',
                 style: TextStyle(
-                  fontFamily: "Gilroy-Medium",
-                  fontSize: 15,
+                  fontFamily: "Kufam_Medium",
+                  fontSize: 20,
                 ),
               ),
               const SizedBox(height: 20,),
               const Text('Amount',
                 style: TextStyle(
                   fontSize: 20,
-                  fontFamily: "Gilroy-Bold",
+                  fontFamily: "Kufam_Medium",
                   color: Colors.black,
 
                 ),),
               const SizedBox(height: 15,),
 
-              const Text("10,000",
-                style: TextStyle(
-                  fontFamily: 'Gilroy-Bold',
+               Text("₦ ${EnString.tenk}",
+                style: const TextStyle(
+                  fontFamily: 'Kufam_Medium',
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
                 ),),
-                  const SizedBox(height: 10,),
+                  const SizedBox(height: 12,),
 
                   builPinput(),
               const SizedBox(height: 20,),
@@ -112,11 +113,11 @@ class _PasscodeRequestState extends State<PasscodeRequest> {
               GestureDetector(
                 onTap: (){
                   Navigator.push(context,
-                    MaterialPageRoute(builder: (context)=>const RegisterFinal(),
+                    MaterialPageRoute(builder: (context)=>const Paymentcomple(),
                     ),
                   );
                 },
-                child: Custombutton.button(primeryColor, EnString.verify, width/1.2),
+                child: Custombutton.button(primeryColor, EnString.pay, width/1.2),
               )
 
 

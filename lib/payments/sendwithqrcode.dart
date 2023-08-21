@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:payonetime/payments/passcoderequest.dart';
 import 'package:provider/provider.dart';
 
 import '../screens/customescreens/customtextfild.dart';
@@ -31,16 +32,15 @@ class _SendWithQrCodeState extends State<SendWithQrCode> {
           IconButton(onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context)=>const Setting()));
           },
-              icon: const Icon(Icons.help_outline))
+              icon: const Icon(Icons.help))
 
         ],
         centerTitle: false,
         title: Text(
-          EnString.verification,
+          EnString.sendingqr,
           style: TextStyle(
             color: notifier.getwihitecolor,
-            fontSize: height / 40,
-            fontFamily: 'Gilroy_Bold',
+            fontFamily: 'Kufam_Medium',
           ),
         ),
       ),
@@ -64,8 +64,8 @@ class _SendWithQrCodeState extends State<SendWithQrCode> {
                     children: [
                       Container(
                         margin: const EdgeInsets.only(top: 40,bottom: 10,left: 20),
-                        width: width/5.0,
-                        height: height/10,
+                        width: width/9.0,
+                        height: height/15,
                         decoration: ShapeDecoration(
                           color: const Color(0xFFCFE8F2),
                           shape: RoundedRectangleBorder(
@@ -73,60 +73,61 @@ class _SendWithQrCodeState extends State<SendWithQrCode> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10,),
-                      const Column(
+                      const SizedBox(width: 10,),
+                       Column(
                           children: [
-                            Text('Aliyu Muhammad'),
-                            Text("081018383488")
+                            Text(EnString.aliyu,style: const TextStyle(
+                              fontFamily: 'Kufam_Medium',
+                              fontSize: 18
+                            ),),
+                            const Text("081018383488",style: TextStyle(
+                              fontFamily: 'Kufam_Medium',
+                              fontSize: 20,
+                            ),)
                           ],
 
                       )
 
                     ],
                   ),
-                  SizedBox(height: 10,),
-                  Container(
-                    margin: const EdgeInsets.only(left: 10,right: 10,),
+                  const SizedBox(height: 10,),
 
-                    child: Customtextfild.textField(
-                      EnterAmount,
-                      EnString.FirstName,
-                      notifier.getvisacolor,
-                      notifier.getvisacolor,
-                      notifier.getvisacolor,
-                      notifier.getblack,
-                      notifier.getvisacolor,
-                      height / 12,
-                      width / 1.1,
-                      EnString.number,
-                      notifier.getvisacolor,
-                      keyboardType: TextInputType.text,
-                    ),
+                  Container(
+                    margin: const EdgeInsets.only(left: 20,right: 20),
+                      child: Customtextbox.textField(
+                        EnterAmount,
+                        EnString.enteramt,
+                        notifier.getvisacolor,
+                        notifier.getvisacolor,
+                        height / 12,
+                        width / 1.1,
+                        TextInputType.number,
+
+
+                      )
                   ),
                   Container(
-                    margin: const EdgeInsets.only(left: 10,right: 10,),
+                      margin: const EdgeInsets.only(left: 20,right: 20),
+                      child: Customtextbox.textField(
+                        addcomment,
+                        EnString.addcommt,
+                        notifier.getvisacolor,
+                        notifier.getvisacolor,
+                        height / 12,
+                        width / 1.1,
+                        TextInputType.text,
 
-                    child: Customtextfild.textField(
-                      addcomment,
-                      EnString.FirstName,
-                      notifier.getvisacolor,
-                      notifier.getvisacolor,
-                      notifier.getvisacolor,
-                      notifier.getblack,
-                      notifier.getvisacolor,
-                      height / 12,
-                      width / 1.1,
-                      EnString.number,
-                      notifier.getvisacolor,
-                      keyboardType: TextInputType.text,
-                    ),
+
+                      )
                   ),
+
 
                   GestureDetector(
                     onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const PasscodeRequest()));
 
                     },
-                    child: Custombutton.button(notifier.getprimeryColor, EnString.login,width/1.2),
+                    child: Custombutton.button(notifier.getprimeryColor, EnString.proceed,width/1.2),
                   )
 
                 ],

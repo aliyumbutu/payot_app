@@ -22,16 +22,7 @@ class Otp extends StatefulWidget {
 class _OtpState extends State<Otp> {
   late ColorNotifier notifier;
 
-  getdarkmodepreviousstate() async {
 
-    final prefs = await SharedPreferences.getInstance();
-    bool? previusstate = prefs.getBool("setIsDark");
-    if (previusstate == null) {
-      notifier.setIsDark = false;
-    } else {
-      notifier.setIsDark = previusstate;
-    }
-  }
   @override
 
   Widget build(BuildContext context) {
@@ -72,8 +63,8 @@ class _OtpState extends State<Otp> {
                                 text: const TextSpan(
 
                                     children: [
-                                      TextSpan(text: 'OTP \n', style: TextStyle(color: Colors.white,fontSize: 50,fontWeight: FontWeight.bold)),
-                                      TextSpan(text: 'Check your mobile message to see \nthe verification code', style: TextStyle(color: Colors.white,fontSize: 20)),
+                                      TextSpan(text: 'OTP \n', style: TextStyle(color: Colors.white,fontSize: 50,fontFamily: 'Kufam_Bold')),
+                                      TextSpan(text: 'Check your mobile message to see \nthe verification code', style: TextStyle(color: Colors.white,fontSize: 20,fontFamily: "Kufam_Medium")),
                                     ]
                                 ),
                               ),
@@ -106,15 +97,21 @@ class _OtpState extends State<Otp> {
             ),
             const SizedBox(height: 20),
 
-            Center(
-              child: Padding(
-                padding:  const EdgeInsets.only(top: 20,left: 150,right:150),
-                child: Image.asset('assets/top.png'),
-              ),
+            Container(
+              height: height/4,
+              width: width/1.1,
+              margin: EdgeInsets.all(20),
+
+                child: Center(
+                    
+                    child: Image.asset('assets/top.png'),
+                  
+                ),
+              
             ),
 
-            const SizedBox(height: 10),
-            Pinput(),
+            const SizedBox(height: 20),
+            const Pinput(),
             SizedBox(height:height/90),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -123,7 +120,7 @@ class _OtpState extends State<Otp> {
                   "+234-813-533-343",
                   style: TextStyle(
                       fontSize: height / 40,
-                      fontFamily: 'Gilroy_Bold',
+                      fontFamily: 'Kufam_Bold',
                       color: notifier.getvisacolor),
                 ),
 

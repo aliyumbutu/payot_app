@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:payonetime/payments/passcoderequest.dart';
+import 'package:payonetime/screens/home/help.dart';
 import 'package:provider/provider.dart';
 
 import '../screens/customescreens/customtextfild.dart';
@@ -30,18 +32,18 @@ class _SendToNumberState extends State<SendToNumber> {
         backgroundColor: notifier.getprimeryColor,
         actions: [
           IconButton(onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Setting()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Help()));
           },
-              icon: const Icon(Icons.help_outline))
+              icon: const Icon(Icons.help))
 
         ],
         centerTitle: false,
         title: Text(
-          EnString.verification,
+          EnString.sendtonumber,
           style: TextStyle(
             color: notifier.getwihitecolor,
             fontSize: height / 40,
-            fontFamily: 'Gilroy_Bold',
+            fontFamily: 'Kufam_Medium',
           ),
         ),
 
@@ -50,7 +52,7 @@ class _SendToNumberState extends State<SendToNumber> {
         child: Container(
           margin: const EdgeInsets.all(20),
           width: width/1.0,
-          height: height/2.2,
+          height: height/2.0,
           decoration: ShapeDecoration(
             color: Colors.white.withOpacity(0.7799999713897705),
             shape:RoundedRectangleBorder(
@@ -61,77 +63,77 @@ class _SendToNumberState extends State<SendToNumber> {
           child: Column(
             children: [
               const SizedBox(height: 30,),
-              Container(
-                margin: const EdgeInsets.only(left: 10,right: 10,),
+             
 
-                child: Customtextfild.textField(
-                  EnterMobileNumber,
-                  EnString.FirstName,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getblack,
-                  notifier.getvisacolor,
-                  height / 12,
-                  width / 1.1,
-                  EnString.number,
-                  notifier.getvisacolor,
-                  keyboardType: TextInputType.text,
-                ),
+              Container(
+                margin: const EdgeInsets.only(left: 20,right:20),
+                  child: Customtextbox.textField(
+                    EnterMobileNumber,
+                    EnString.number,
+                    notifier.getvisacolor,
+                    notifier.getvisacolor,
+                    height / 12,
+                    width / 1.1,
+                    TextInputType.phone,
+
+
+                  )
               ),
+              const SizedBox(height: 20,),
 
               Row(
                 children: [
                   Container(
                     margin: const EdgeInsets.only(left: 20),
-                    child: const Text('Aliyu muhammad'),
+                    child:  Text(EnString.aliyu,style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "Kufam_Medium",
+                      color: notifier.getprimeryColor,
+
+                    ),),
                   ),
                 ],
               ),
               const SizedBox(height: 20,),
               Container(
-                margin: const EdgeInsets.only(left: 10,right: 10,),
+                  margin: const EdgeInsets.only(left: 20,right:20),
+                  child: Customtextbox.textField(
+                    EnterAmount,
+                    EnString.enteramt,
+                    notifier.getvisacolor,
+                    notifier.getvisacolor,
+                    height / 12,
+                    width / 1.1,
+                    TextInputType.number,
 
-                child: Customtextfild.textField(
-                  EnterAmount,
-                  EnString.FirstName,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getblack,
-                  notifier.getvisacolor,
-                  height / 12,
-                  width / 1.1,
-                  EnString.number,
-                  notifier.getvisacolor,
-                  keyboardType: TextInputType.text,
-                ),
+
+                  )
               ),
+              const SizedBox(height: 20,),
+
 
               //const SizedBox(height:5,),
               Container(
-                margin: const EdgeInsets.only(left: 10,right: 10,),
+                  margin: const EdgeInsets.only(left: 20,right:20),
+                  child: Customtextbox.textField(
+                    AddComment,
+                    EnString.addcommt,
+                    notifier.getvisacolor,
+                    notifier.getvisacolor,
+                    height / 12,
+                    width / 1.1,
+                    TextInputType.text,
 
-                child: Customtextfild.textField(
-                  AddComment,
-                  EnString.FirstName,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getvisacolor,
-                  notifier.getblack,
-                  notifier.getvisacolor,
-                  height / 12,
-                  width / 1.1,
-                  EnString.number,
-                  notifier.getvisacolor,
-                  keyboardType: TextInputType.text,
-                ),
+
+                  )
               ),
+
               GestureDetector(
                 onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const PasscodeRequest()));
 
                 },
-                child: Custombutton.button(notifier.getprimeryColor, EnString.login,width/1.2),
+                child: Custombutton.button(notifier.getprimeryColor, EnString.proceed,width/1.2),
               )
 
 

@@ -1,12 +1,18 @@
 
 import 'package:flutter/material.dart';
-import 'package:payonetime/screens/home/profilesettings.dart';
+import 'package:payonetime/screens/authscreens/kycverification.dart';
+import 'package:payonetime/screens/home/help.dart';
+import 'package:payonetime/screens/home/passcode.dart';
+import 'package:payonetime/screens/home/profilesetting.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 import 'package:provider/provider.dart';
 
 import '../../utils/colornotifir.dart';
 import '../../utils/enlanguage.dart';
 import '../../utils/mediaqury.dart';
+import '../authscreens/setpasscode.dart';
+import 'accountlimit.dart';
+import 'accountstatement.dart';
 
 class Setting extends StatefulWidget {
   const Setting({super.key});
@@ -24,18 +30,19 @@ class _Setting extends State<Setting> {
       appBar: AppBar(
 
         actions: [
-          IconButton(onPressed: (){},
-              icon: const Icon(Icons.help_outline))
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Help()));
+          },
+              icon: const Icon(Icons.help))
         ],
         backgroundColor: notifier.getprimeryColor,
 
         centerTitle: false,
         title: Text(
-          EnString.verification,
+          "Settings",
           style: TextStyle(
             color: notifier.getwihitecolor,
-            fontSize: height / 40,
-            fontFamily: 'Gilroy_Bold',
+            fontFamily: 'Kufam_Medium',
           ),
         ),
       ),
@@ -43,13 +50,13 @@ class _Setting extends State<Setting> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const SizedBox(height: 20,),
+            const SizedBox(height: 10,),
             const Text(
               'Aliya Muhammad',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 18,
-                fontFamily: 'Gilroy-Medium',
+                fontFamily: 'Kufam_Medium',
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -58,11 +65,11 @@ class _Setting extends State<Setting> {
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 18,
-                fontFamily: 'Gilroy-Medium',
+                fontFamily: 'Kufam_Medium',
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(height: 5,),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -70,7 +77,7 @@ class _Setting extends State<Setting> {
                   child: PrettyQr(
                     image: const AssetImage('assets/logo2.png'),
                     typeNumber: 3,
-                    size: 200,
+                    size: 150,
                     data: 'https://payonetime.ng',
                     errorCorrectLevel: QrErrorCorrectLevel.M,
                     roundEdges: true,
@@ -80,7 +87,7 @@ class _Setting extends State<Setting> {
 
               ],
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 5),
 
             const Text(
               'Scan and Pay me with this QR',
@@ -95,10 +102,8 @@ class _Setting extends State<Setting> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
-
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
-
                   children: [
                     _buildButtonColumnShareDocument(notifier.getwihitecolor, notifier.getwihitecolor, 'Share'),
                     _buildButtonColumnShareDocument(notifier.getwihitecolor, notifier.getwihitecolor, 'Download')
@@ -109,9 +114,10 @@ class _Setting extends State<Setting> {
             ),
             Column(
               children: [
-                const SizedBox(height: 20),
+                const SizedBox(height: 5),
                 Container(
-                  height: height/2.0,
+                  margin: const EdgeInsets.all(20),
+                  height: height/2.2,
                   width: width,
                   decoration: BoxDecoration(
                     color: notifier.getwihitecolor,
@@ -120,7 +126,7 @@ class _Setting extends State<Setting> {
 
                   child: Column(
                     children: [
-                      const SizedBox(height: 20,),
+                       SizedBox(height: height/70,),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -130,82 +136,102 @@ class _Setting extends State<Setting> {
                             ),
                           );
                         },
-                        child: settingtype(Icons.settings, EnString.editprofile),
+                        child: settingtype(Icons.settings, EnString.profilesetss),
+                      ),
+                      const Padding
+                        (padding: EdgeInsets.only(left: 20,right: 20),
+                        child: Divider(),
                       ),
 
-                      SizedBox(height: height/50),
+                      SizedBox(height: height/70),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ProfileSettings(),
+                              builder: (context) => const KycVerification(),
                             ),
                           );
                         },
-                        child: settingtype(Icons.verified, EnString.kyc),
+                        child: settingtype(Icons.verified, EnString.kycup),
                       ),
-                      const SizedBox(height:20,),
+                      const Padding
+                        (padding: EdgeInsets.only(left: 20,right: 20),
+                        child: Divider(),
+                      ),
+                       SizedBox(height:height/70,),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ProfileSettings(),
+                              builder: (context) => const AccountStatement(),
                             ),
                           );
                         },
-                        child: settingtype(Icons.document_scanner, EnString.statement),
+                        child: settingtype(Icons.document_scanner, EnString.downlodstm),
                       ),
-                      SizedBox(height: height/50),
+                      const Padding
+                        (padding: EdgeInsets.only(left: 20,right: 20),
+                        child: Divider(),
+                      ),
+                      SizedBox(height: height/70),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ProfileSettings(),
+                              builder: (context) => const SetPascscode(),
                             ),
                           );
                         },
-                        child: settingtype(Icons.lock_person_sharp, EnString.changepss),
+                        child: settingtype(Icons.lock_person_sharp, EnString.chagss),
                       ),
-                      SizedBox(height: height/50),
+                      const Padding
+                        (padding: EdgeInsets.only(left: 20,right: 20),
+                        child: Divider(),
+                      ),
+                      SizedBox(height: height/70),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ProfileSettings(),
+                              builder: (context) => const AccountLimit(),
                             ),
                           );
                         },
-                        child: settingtype(Icons.info_outline, EnString.accLmt),
+                        child: settingtype(Icons.info_outline, EnString.acclmt),
                       ),
-                      SizedBox(height: height/50),
+                      const Padding
+                        (padding: EdgeInsets.only(left: 20,right: 20),
+                        child: Divider(),
+                      ),
+                      SizedBox(height: height/70),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ProfileSettings(),
+                              builder: (context) => const Help(),
                             ),
                           );
                         },
                         child: settingtype(Icons.help_outline_rounded, EnString.help),
                       ),
-                      SizedBox(height: height/50),
+                      const Padding
+                        (padding: EdgeInsets.only(left: 20,right: 20),
+                        child: Divider(),
+                      ),
+                      SizedBox(height: height/70),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const ProfileSettings(),
-                            ),
-                          );
+
                         },
-                        child: settingtype(Icons.settings, EnString.about),
+                        child: settingtype(Icons.settings, EnString.aboutus),
                       ),
-                      SizedBox(height: height/20,),
+
+                      SizedBox(height: height/70,),
                       Container(
                         width: 130,
                         height: 22,
@@ -247,26 +273,11 @@ class _Setting extends State<Setting> {
             )
 
 
-
-
-
-
           ],
         ),
 
 
-
-
-
-
-
-
-
       ),
-
-
-
-
 
 
 
@@ -292,7 +303,7 @@ class _Setting extends State<Setting> {
             child: Text(
               label,
               style: TextStyle(
-                fontFamily: "Gilroy-Medium",
+                fontFamily: "Kufam_Medium",
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
                 color: color1,
@@ -329,7 +340,7 @@ class _Setting extends State<Setting> {
             style: TextStyle(
               color: notifier.getblack,
               fontSize: height / 50,
-              fontFamily: 'Gilroy_Medium',
+              fontFamily: 'Kufam_Medium',
             ),
           ),
           const Spacer(),

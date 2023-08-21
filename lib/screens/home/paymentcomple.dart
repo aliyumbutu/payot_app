@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:payonetime/screens/home/homescreen.dart';
 import 'package:payonetime/screens/home/settings.dart';
 import 'package:provider/provider.dart';
 
@@ -26,15 +27,14 @@ class _PaymentcompleState extends State<Paymentcomple> {
           IconButton(onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context)=>const Setting()));
           },
-              icon: const Icon(Icons.help_outline))
+              icon: const Icon(Icons.help))
         ],
         centerTitle: false,
         title: Text(
-          EnString.verification,
+          EnString.paymcomplte,
           style: TextStyle(
             color: notifier.getwihitecolor,
-            fontSize: height / 40,
-            fontFamily: 'Gilroy_Bold',
+            fontFamily: 'Kufam_Medium',
           ),
         ),
 
@@ -73,7 +73,7 @@ class _PaymentcompleState extends State<Paymentcomple> {
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
-                    fontFamily: 'Gilroy-bold',
+                    fontFamily: 'Kufam_Bold',
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -83,7 +83,7 @@ class _PaymentcompleState extends State<Paymentcomple> {
                   style: TextStyle(
                     color: Color(0xFF726666),
                     fontSize: 20,
-                    fontFamily: 'Gilroy-Medium',
+                    fontFamily: 'Kufam_Bold',
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -95,7 +95,7 @@ class _PaymentcompleState extends State<Paymentcomple> {
                   style: TextStyle(
                     color: Color(0xFF007CBB),
                     fontSize: 40,
-                    fontFamily: 'Gilroy-Bold',
+                    fontFamily: 'Kufam_Bold',
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -105,14 +105,18 @@ class _PaymentcompleState extends State<Paymentcomple> {
                   style: TextStyle(
                     color: Color(0xFF007CBB),
                     fontSize: 15,
-                    fontFamily: 'Gliroy-Medium',
+                    fontFamily: 'Kufam_Medium',
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    _buildButtonColumnPayC(notifier.getwihitecolor, notifier.getwihitecolor, 'Home'),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                      },
+                        child: _buildButtonColumnPayC(notifier.getwihitecolor, notifier.getwihitecolor, 'Home')),
                     _buildButtonColumnPayC(notifier.getwihitecolor, notifier.getwihitecolor, 'Pay Again'),
                     _buildButtonColumnPayC(notifier.getwihitecolor, notifier.getwihitecolor,'Share'),
                   ],
@@ -150,7 +154,7 @@ class _PaymentcompleState extends State<Paymentcomple> {
             child: Text(
               label,
               style: TextStyle(
-                fontFamily: "Gilroy-Medium",
+                fontFamily: "Kufam_Medium",
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
                 color: color1,

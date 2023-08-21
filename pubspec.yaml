@@ -40,6 +40,11 @@ dependencies:
   flutter_custom_clippers: ^2.1.0
   pinput: ^3.0.0
   pretty_qr_code: ^2.0.3
+  qr_code_scanner: ^1.0.1
+  textfield_datepicker: ^0.2.0
+  material_design_icons_flutter: 7.0.7296
+  custom_clippers: ^2.0.0
+
 
 
 
@@ -84,15 +89,15 @@ flutter:
   # example:
   fonts:
 
-    - family: Gilroy_Medium
+    - family: Kufam_Medium
       fonts:
-        - asset: font/Gilroy-Medium.otf
-    - family: Gilroy_Bold
+        - asset: fonts/Kufam-Medium.ttf
+    - family: Kufam_Bold
       fonts:
-        - asset: font/Gilroy-Bold.otf
-    - family: Gilroy_Regular
+        - asset: fonts/Kufam-Bold.ttf
+    - family: Kufam_Regular
       fonts:
-        - asset: font/Gilroy-Regular.otf
+        - asset: fonts/Kufam-Regular.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

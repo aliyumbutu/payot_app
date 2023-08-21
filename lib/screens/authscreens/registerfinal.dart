@@ -21,16 +21,7 @@ class RegisterFinal extends StatefulWidget {
 class _RegisterFinalState extends State<RegisterFinal> {
   late ColorNotifier notifier;
 
-  getdarkmodepreviousstate() async {
 
-    final prefs = await SharedPreferences.getInstance();
-    bool? previusstate = prefs.getBool("setIsDark");
-    if (previusstate == null) {
-      notifier.setIsDark = false;
-    } else {
-      notifier.setIsDark = previusstate;
-    }
-  }
   @override
   Widget build(BuildContext context) {
     TextEditingController firstName = TextEditingController();
@@ -74,8 +65,8 @@ class _RegisterFinalState extends State<RegisterFinal> {
                               child: RichText(
                                 text: const TextSpan(
                                     children: [
-                                      TextSpan(text: 'Register \n', style: TextStyle(color: Colors.white,fontSize: 50,fontWeight: FontWeight.bold)),
-                                      TextSpan(text: 'Final stage', style: TextStyle(color: Colors.white,fontSize: 20)),
+                                      TextSpan(text: 'Register \n', style: TextStyle(color: Colors.white,fontSize: 50, fontFamily: "Kufam_Bold")),
+                                      TextSpan(text: 'Final stage', style: TextStyle(color: Colors.white,fontSize: 20,fontFamily: 'Kufam_Medium')),
                                     ]
                                 ),
                               ),
@@ -117,71 +108,59 @@ class _RegisterFinalState extends State<RegisterFinal> {
             ),
             SizedBox(height:height/100),
             Container(
-              child: Customtextfild.textField(
-                firstName,
-                EnString.FirstName,
-                notifier.getvisacolor,
-                notifier.getvisacolor,
-                notifier.getvisacolor,
-                notifier.getblack,
-                notifier.getvisacolor,
-                height / 12,
-                width / 1.1,
-                EnString.number,
-                notifier.getvisacolor,
-                keyboardType: TextInputType.text,
-              ),
+                child: Customtextbox.textField(
+                  firstName,
+                  EnString.FirstName,
+                  notifier.getvisacolor,
+                  notifier.getvisacolor,
+                  height / 12,
+                  width / 1.1,
+                  TextInputType.text,
+
+
+                )
             ),
             SizedBox(height:height/100),
             Container(
-              child: Customtextfild.textField(
-                lastName,
-                EnString.SecondName,
-                notifier.getvisacolor,
-                notifier.getvisacolor,
-                notifier.getvisacolor,
-                notifier.getblack,
-                notifier.getvisacolor,
-                height / 12,
-                width / 1.1,
-                EnString.number,
-                notifier.getvisacolor,
-                keyboardType: TextInputType.text,
-              ),
+                child: Customtextbox.textField(
+                  lastName,
+                  EnString.SecondName,
+                  notifier.getvisacolor,
+                  notifier.getvisacolor,
+                  height / 12,
+                  width / 1.1,
+                  TextInputType.text,
+
+
+
+                )
             ),
             SizedBox(height:height/100),
             Container(
-              child: Customtextfild.textField(
-                dateOfBirth,
-                EnString.DOB,
-                notifier.getvisacolor,
-                notifier.getvisacolor,
-                notifier.getvisacolor,
-                notifier.getblack,
-                notifier.getvisacolor,
-                height / 12,
-                width / 1.1,
-                EnString.number,
-                notifier.getvisacolor,
-                keyboardType: TextInputType.text,
-              ),
+                child: Customtextbox.textField(
+                  dateOfBirth,
+                  EnString.DOB,
+                  notifier.getvisacolor,
+                  notifier.getvisacolor,
+                  height / 12,
+                  width / 1.1,
+                  TextInputType.datetime,
+
+
+                )
             ),
-            SizedBox(height:height/100),
-            Container(
-              child: Customtextfild.textField(
-                Gender,
-                EnString.Gender,
-                notifier.getvisacolor,
-                notifier.getvisacolor,
-                notifier.getvisacolor,
-                notifier.getblack,
-                notifier.getvisacolor,
-                height / 12,
-                width / 1.1,
-                EnString.number,
-                notifier.getvisacolor,
-                keyboardType: TextInputType.text,
-              ),
+            SizedBox(height:height/100), Container(
+                child: Customtextbox.textField(
+                  Gender,
+                  EnString.Gender,
+                  notifier.getvisacolor,
+                  notifier.getvisacolor,
+                  height / 12,
+                  width / 1.1,
+                  TextInputType.text,
+
+
+                )
             ),
             SizedBox(height: height/100),
             GestureDetector(
@@ -191,7 +170,7 @@ class _RegisterFinalState extends State<RegisterFinal> {
                   ),
                 );
               },
-              child: Custombutton.button(primeryColor, EnString.submit, width/1.1),
+              child: Custombutton.button(primeryColor, EnString.register, width/1.1),
             ),
 
             SizedBox(height: height/20,)

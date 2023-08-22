@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:payonetime/screens/authscreens/kycverification.dart';
 import 'package:payonetime/screens/home/help.dart';
-import 'package:payonetime/screens/home/passcode.dart';
 import 'package:payonetime/screens/home/profilesetting.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 import 'package:provider/provider.dart';
@@ -33,7 +32,7 @@ class _Setting extends State<Setting> {
 
         actions: [
           IconButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Help()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Help()));
           },
               icon: const Icon(Icons.help))
         ],

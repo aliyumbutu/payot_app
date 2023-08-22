@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:payonetime/payments/passcoderequest.dart';
 import 'package:payonetime/screens/home/help.dart';
-import 'package:payonetime/screens/home/settings.dart';
 import 'package:provider/provider.dart';
 
 import '../../utils/colornotifir.dart';
